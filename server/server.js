@@ -1,22 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const app = express()
+const PORT = 3000
 
+app.use(cors())
 app.use(express.static(`${__dirname}/../public`))
 app.use(bodyParser.json())
 
-const PORT = 3000
+require('./routes')
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`)
 })
-
-const session = require('express-session')
-
-app.use(session({
-  secret: 'secretWord',
-  cookie: { maxAge: 600000 }, // ten minutes
-  resave: false,
-  saveUninitialized: true,
-}))
