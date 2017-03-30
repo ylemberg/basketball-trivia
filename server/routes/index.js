@@ -1,5 +1,5 @@
 const playerRoutes = require('./playerRoutes')
 
-module.exports = () => {
+module.exports = app => {
   app.use('/players', playerRoutes)
 }

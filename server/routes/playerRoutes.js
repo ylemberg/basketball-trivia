@@ -1,2 +1,6 @@
 const router = require('express').Router()
-const ordersCtrl = require('../controllers/playerCtrl')
+const playerCtrl = require('../controllers/playerCtrl')
+
+router.get('/getall', playerCtrl.getPlayers)
+
+module.exports = router

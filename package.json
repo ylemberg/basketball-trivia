@@ -5,11 +5,20 @@
   "repository": "https://github.com/ylemberg/basketball-trivia.git",
   "author": "Yuriy Lemberg <yuriy.v.lemberg@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack -d --watch",
+    "start": "nodemon ./server/server.js",
+    "dev": "webpack-dev-server --progress --colors",
+    "devDash": "webpack-dashboard webpack-dev-server --progress --colors",
+    "test": "DB_TESTING=true mocha --reporter nyan",
+    "startApp": "DB_TESTING=false nodemon ./server/server.js | ./node_modules/.bin/webpack -d --watch"
+  },
   "dependencies": {
     "body-parser": "^1.17.1",
     "cors": "^2.8.2",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
+    "morgan": "^1.8.1",
     "react": "^15.4.2",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
