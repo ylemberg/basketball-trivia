@@ -8,7 +8,7 @@ const PORT = 3000
 
 app.use(cors())
 app.use(morgan('tiny'))
-app.use(express.static(`${__dirname}/../public`))
+app.use(express.static(`${__dirname}/../app/build`))
 app.use(bodyParser.json())
 
 require('./routes')(app)
