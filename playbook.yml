@@ -1,0 +1,5 @@
+- copy:
+    src: /Users/yuriylemberg/Documents/apps/basketball-trivia/.env
+    dest: /home/ubuntu/basketball-trivia/.env
+    owner: root
+    group: root
