@@ -1,5 +1,10 @@
-- copy:
-    src: /Users/yuriylemberg/Documents/apps/basketball-trivia/.env
-    dest: /home/ubuntu/basketball-trivia/.env
-    owner: root
-    group: root
+---
+- name: Transfer environment variables
+  hosts: webservers
+  tasks:
+  - name: copy the latest env file
+    copy:
+      src: /Users/yuriylemberg/Documents/apps/basketball-trivia/.env
+      dest: /home/ubuntu/basketball-trivia/.env
+      owner: root
+      group: root
