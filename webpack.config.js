@@ -59,13 +59,13 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([{ from: PUBLIC_DIR }]),
     new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin(),
+    // new DashboardPlugin(),
     new DotenvPlugin({
       sample: './.env.example',
       path: './.env'
     })
   ],
-  watch: true,
+  watch: false,
   stats: { colors: true },
   devtool: 'inline-source-map'
 }
