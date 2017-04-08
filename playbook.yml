@@ -6,6 +6,18 @@
     copy:
       src: /Users/yuriylemberg/Documents/apps/basketball-trivia/.env
       dest: /home/ubuntu/basketball-trivia/.env
-  - name:
+  - name: Clone / Pull lates repo
     git: repo=git://github.com/ylemberg/basketball-trivia.git
         dest=/home/ubuntu/basketball-trivia
+  - name: Install dependencies
+    command: yarn
+    args:
+      chdir: /home/ubuntu/basketball-trivia
+  - name: Run Webpack
+    command: webpack
+    args:
+      chdir: /home/ubuntu/basketball-trivia
+  - name: Run server forever
+    command: forever start server/server.js
+    args:
+      chdir: /home/ubuntu/basketball-trivia
