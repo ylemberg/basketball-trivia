@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "webpack": "webpack -d --watch",
-    "start": "node ./server/server.js",
+    "start": "nodemon ./server/server.js",
     "dev": "webpack-dev-server --progress --colors",
     "devDash": "webpack-dashboard webpack-dev-server --progress --colors",
     "test": "mocha --reporter nyan",

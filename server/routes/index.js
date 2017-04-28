@@ -1,6 +1,4 @@
-const playerRoutes = require('./playerRoutes')
+const router = require('express').Router()
+const playerRoutes = require('./playerRoutes')(router)
 
-module.exports = app => {
-  // handle all other (wrong) routes somehow
-  app.use('/players', playerRoutes)
-}
+module.exports = router
