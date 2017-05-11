@@ -10,6 +10,5 @@ app/build
 basketball-trivia.pem
 
 ** misc **
-private
 .DS_Store
 playbook.retry
