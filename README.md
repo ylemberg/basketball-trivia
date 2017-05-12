@@ -17,4 +17,4 @@
 * [Awesome React](https://github.com/enaqx/awesome-react)
 
 ### Setting Up Docs
-* [Yarn Cheatsheet](https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc#.1ckrhd77a)
+* [Yarn Cheatsheet](https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc#.1ckrhd77a) 
