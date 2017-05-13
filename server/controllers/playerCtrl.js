@@ -5,7 +5,9 @@ const getPlayers = (req, res) => {
 }
 
 const randomPlayer = (req, res) => {
-  res.send('Getting a random player')
+  playerUtil.randomPlayer((err, data) => {
+    res.send('Getting a random player')
+  })
 }
 
 module.exports = {

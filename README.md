@@ -12,6 +12,8 @@
 ---
 ## Libraries Used
 * [nba.js](https://github.com/kshvmdn/nba.js)
+* [chai.js](http://chaijs.com/api/bdd/)
+* [mocha.js](https://mochajs.org/)
 ---
 ## List of Resources
 ### Awesome Lists
