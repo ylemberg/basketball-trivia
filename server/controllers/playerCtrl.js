@@ -1,4 +1,4 @@
-const playerCtrl = require('../controllers/playerCtrl')
+const playerUtil = require('../utilities/playerUtils')
 
 const getPlayers = (req, res) => {
   res.send('Hit /players route')

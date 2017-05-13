@@ -10,9 +10,11 @@
   * [refactor] - code does the same thing but it is better code
 
 ---
+## Libraries Used
+* [nba.js](https://github.com/kshvmdn/nba.js)
+---
 ## List of Resources
-
-  ### Awesome Lists
+### Awesome Lists
 * [Awesome Redux](https://github.com/xgrommx/awesome-redux)
 * [Awesome React](https://github.com/enaqx/awesome-react)
 
