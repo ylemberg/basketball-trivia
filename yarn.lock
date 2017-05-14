@@ -2891,9 +2891,9 @@ native-promise-only@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
 
-nba.js@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/nba.js/-/nba.js-0.3.3.tgz#dd3b18d71817a307aaf51fb467cde72a77bd2911"
+nba.js@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nba.js/-/nba.js-0.4.0.tgz#d9f5c81e080471aedc51c56d472b6aed18a00e0a"
   dependencies:
     got "^6.6.1"
 

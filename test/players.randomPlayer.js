@@ -52,12 +52,12 @@ describe('Players Util', () => {
       })
   })
 
-  it.only('should get every player that has ever played', () => {
-    const formattedPlayer = playersUtil.formatPlayer
+  it('should get every player that has ever played', () => {
+    const formattedPlayer = playersUtil.formatPlayer(player)
     expect(formattedPlayer).to.be.ok
     expect(formattedPlayer).to.be.an('object')
-    expect(player).to.have.ownProperty('name')
-    expect(player).to.have.ownProperty('startYear')
-    expect(player).to.have.ownProperty('endYear')
+    expect(formattedPlayer).to.have.ownProperty('name')
+    expect(formattedPlayer).to.have.ownProperty('startYear')
+    expect(formattedPlayer).to.have.ownProperty('endYear')
   })
 })
