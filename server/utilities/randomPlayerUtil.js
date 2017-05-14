@@ -5,6 +5,8 @@ const requestAllPlayers = () => {
   return nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => {
     console.log('OH SHIT WERE INSIDE THE DOT THEN')
     return data.CommonAllPlayers
+  }).catch(err => {
+    console.log('WHAT WENT WRONG????', err)
   })
 }
 
