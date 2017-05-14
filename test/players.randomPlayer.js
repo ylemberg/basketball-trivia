@@ -4,6 +4,7 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 describe('Random player', () => {
   console.log('CAN I SEE THESE CONSOLESSS???')
   it('should be returned when randomPlayer util invoked', () => {
+    console.log('ABOUT TO INVOKE GETTTT')
     return randomPlayer.get()
       .then(player => {
         expect(player).to.be.ok

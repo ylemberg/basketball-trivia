@@ -1,10 +1,6 @@
 const nba = require('nba.js')
 
-const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 })
-  .then(data => data.CommonAllPlayers)
-  .catch(err => {
-    console.log('yooo what is going on', err)
-  })
+const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => data.CommonAllPlayers)
 
 const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
 
@@ -16,7 +12,15 @@ const formatPlayer = player => {
   }
 }
 
-const get = () => requestAllPlayers().then(players => formatPlayer(pickRandomPlayerFromArray(players)))
+const get = () => {
+  console.log('GET IS INVOKED I PROMISE')
+  return requestAllPlayers()
+    .then(players => formatPlayer(pickRandomPlayerFromArray(players)))
+    .catch(err => {
+      console.log('PLEAZSSSSSSSS')
+      console.log('yooo what is going on', err)
+    })
+}
 
 module.exports = {
   get,
