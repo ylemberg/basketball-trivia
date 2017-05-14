@@ -12,10 +12,10 @@ const formatPlayer = player => {
   }
 }
 
-const randomPlayer = () => requestAllPlayers().then(players => formatPlayer(pickRandomPlayerFromArray(players)))
+const get = () => requestAllPlayers().then(players => formatPlayer(pickRandomPlayerFromArray(players)))
 
 module.exports = {
-  randomPlayer,
+  get,
   requestAllPlayers,
   pickRandomPlayerFromArray,
   formatPlayer

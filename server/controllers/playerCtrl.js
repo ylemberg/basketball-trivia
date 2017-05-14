@@ -1,11 +1,11 @@
-const playerUtil = require('../utilities/randomPlayerUtil')
+const randomPlayer = require('../utilities/randomPlayerUtil')
 
 const getPlayers = (req, res) => {
   res.send('Hit /players route')
 }
 
-const randomPlayer = (req, res) => {
-  playerUtil.randomPlayer()
+const getRandomPlayer = (req, res) => {
+  randomPlayer.get()
     .then(player => {
       res.send(player)
     }).catch(err => {
@@ -14,6 +14,6 @@ const randomPlayer = (req, res) => {
 }
 
 module.exports = {
-  getPlayers,
-  randomPlayer
+  getRandomPlayer,
+  getPlayers
 }
