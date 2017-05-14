@@ -13,6 +13,7 @@ const requestAllPlayers = () => {
 const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
 
 const formatPlayer = player => {
+  console.log('FORMATTING PLAYER')
   return {
     name: player.display_first_last,
     startYear: player.from_year,
@@ -23,7 +24,10 @@ const formatPlayer = player => {
 const get = () => {
   console.log('GET IS INVOKED I PROMISE')
   return requestAllPlayers()
-    .then(players => formatPlayer(pickRandomPlayerFromArray(players)))
+    .then(players => {
+      console.log('MAYBE WE ACTUALLY DID GET THIS FAR')
+      return formatPlayer(pickRandomPlayerFromArray(players))
+    })
     .catch(err => {
       console.log('PLEAZSSSSSSSS')
       console.log('yooo what is going on', err)
