@@ -3,16 +3,18 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 
 describe('Random player', () => {
   console.log('CAN I SEE THESE CONSOLESSS???')
-  it('should be returned when randomPlayer util invoked', () => {
+  it.only('should be returned when randomPlayer util invoked', (done) => {
     console.log('ABOUT TO INVOKE GETTTT')
-    return randomPlayer.get()
+    randomPlayer.get()
       .then(player => {
         expect(player).to.be.ok
         expect(player).to.have.ownProperty('name')
         expect(player).to.have.ownProperty('startYear')
         expect(player).to.have.ownProperty('endYear')
+        done()
       }).catch(err => {
         console.log('errrrrrrr', err)
+        done()
       })
   })
 })
