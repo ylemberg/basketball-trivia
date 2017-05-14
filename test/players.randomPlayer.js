@@ -23,7 +23,7 @@ const nba = require('nba.js')
 describe('NBA library', () => {
   it.only('should get every player that has ever played', done => {
     console.log('LETS TRY TO SIMPLIFY THIS')
-    nba.stats.allPlayers({ IsOnlyCurrentSeason: 1 }).then(data => {
+    nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => {
       console.log('OH SHIT WERE INSIDE THE DOT THEN')
       done()
       // return data.CommonAllPlayers
