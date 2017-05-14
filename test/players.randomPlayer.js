@@ -21,13 +21,15 @@ const nba = require('nba.js')
 // })
 
 describe('NBA library', () => {
-  it.only('should get every player that has ever played', () => {
+  it.only('should get every player that has ever played', done => {
     console.log('LETS TRY TO SIMPLIFY THIS')
-    return nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => {
+    nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => {
       console.log('OH SHIT WERE INSIDE THE DOT THEN')
-      return data.CommonAllPlayers
+      done()
+      // return data.CommonAllPlayers
     }).catch(err => {
       console.log('WHAT WENT WRONG????', err)
+      done()
     })
     // return randomPlayer.requestAllPlayers()
     //   .then(players => {
