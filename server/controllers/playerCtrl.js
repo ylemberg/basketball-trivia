@@ -6,8 +6,8 @@ const getPlayers = (req, res) => {
 
 const randomPlayer = (req, res) => {
   playerUtil.randomPlayer()
-    .then(data => {
-      res.send('Getting a random player')
+    .then(player => {
+      res.send(player)
     }).catch(err => {
       res.status(500).send(err)
     })
