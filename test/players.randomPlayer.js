@@ -3,7 +3,7 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 
 describe('Random player', () => {
   console.log('CAN I SEE THESE CONSOLESSS???')
-  it.only('should be returned when randomPlayer util invoked', (done) => {
+  it.only('should be returned when randomPlayer util invoked', done => {
     console.log('ABOUT TO INVOKE GETTTT')
     randomPlayer.get()
       .then(player => {
@@ -16,7 +16,7 @@ describe('Random player', () => {
         console.log('errrrrrrr', err)
         done()
       })
-  })
+  }, 10000)
 })
 
 describe('NBA library', () => {
