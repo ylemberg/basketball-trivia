@@ -2,6 +2,7 @@ const expect = require('chai').expect
 const randomPlayer = require('../server/utilities/randomPlayerUtil')
 
 describe('Random player', () => {
+  console.log('CAN I SEE THESE CONSOLESSS???')
   it('should be returned when randomPlayer util invoked', () => {
     return randomPlayer.get()
       .then(player => {

@@ -1,6 +1,10 @@
 const nba = require('nba.js')
 
-const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => data.CommonAllPlayers)
+const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 })
+  .then(data => data.CommonAllPlayers)
+  .catch(err => {
+    console.log('yooo what is going on', err)
+  })
 
 const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
 
