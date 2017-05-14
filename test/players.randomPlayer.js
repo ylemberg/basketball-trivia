@@ -3,7 +3,7 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 
 describe('Random player', () => {
   console.log('CAN I SEE THESE CONSOLESSS???')
-  it.only('should be returned when randomPlayer util invoked', done => {
+  it('should be returned when randomPlayer util invoked', done => {
     console.log('ABOUT TO INVOKE GETTTT')
     randomPlayer.get()
       .then(player => {
@@ -20,14 +20,16 @@ describe('Random player', () => {
 })
 
 describe('NBA library', () => {
-  it('should get every player that has ever played', () => {
+  it.only('should get every player that has ever played', () => {
+    console.log('CHANGING TEST TO REQUEST ALL PLAYERS')
     return randomPlayer.requestAllPlayers()
       .then(players => {
+        console.log('DOT THEN OF REQUEST ALL PLAYERS')
         expect(players).to.be.ok
         expect(players).to.be.instanceof(Array)
         expect(players).to.have.lengthOf(4163)
       })
-  })
+  }, 10000)
 })
 
 describe('Players Util', () => {
