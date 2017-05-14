@@ -1,6 +1,5 @@
 const nba = require('nba.js')
 
-
 const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => data.CommonAllPlayers)
 
 const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
@@ -13,8 +12,7 @@ const formatPlayer = player => {
   }
 }
 
-const randomPlayer = () => requestAllPlayers()
-  .then(players => formatPlayer(pickRandomPlayerFromArray(players)))
+const randomPlayer = () => requestAllPlayers().then(players => formatPlayer(pickRandomPlayerFromArray(players)))
 
 module.exports = {
   randomPlayer,

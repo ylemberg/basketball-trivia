@@ -1,4 +1,4 @@
-const playerUtil = require('../utilities/playersUtil')
+const playerUtil = require('../utilities/randomPlayerUtil')
 
 const getPlayers = (req, res) => {
   res.send('Hit /players route')
