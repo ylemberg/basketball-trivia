@@ -9,6 +9,8 @@ describe('Random player', () => {
         expect(player).to.have.ownProperty('name')
         expect(player).to.have.ownProperty('startYear')
         expect(player).to.have.ownProperty('endYear')
+      }).catch(err => {
+        console.log('errrrrrrr', err)
       })
   })
 })
