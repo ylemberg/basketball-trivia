@@ -4,7 +4,7 @@ const getPlayers = (req, res) => {
   res.send('Hit /players route')
 }
 
-const getRandomPlayer = (req, res) => {
+const getRandomPlayerInHardMode = (req, res) => {
   randomPlayer.get()
     .then(player => {
       res.send(player)
@@ -13,7 +13,12 @@ const getRandomPlayer = (req, res) => {
     })
 }
 
+const getRandomPlayerInEasyMode = (req, res) => {
+  res.send(randomPlayer.getEasyMode())
+}
+
 module.exports = {
-  getRandomPlayer,
+  getRandomPlayerInHardMode,
+  getRandomPlayerInEasyMode,
   getPlayers
 }

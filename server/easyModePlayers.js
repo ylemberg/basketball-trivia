@@ -3,7 +3,7 @@ module.exports = [
     name: 'Kobe Bryant',
     team: 'Los Angeles Lakers'
   }, {
-    name: 'Shaquille O\'neal',
+    name: 'Shaquille O\'Neal',
     team: 'Los Angeles Lakers'
   }, {
     name: 'James Harden',
