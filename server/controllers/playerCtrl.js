@@ -14,7 +14,11 @@ const getRandomPlayerInHardMode = (req, res) => {
 }
 
 const getRandomPlayerInEasyMode = (req, res) => {
-  res.send(randomPlayer.getEasyMode())
+  try {
+    res.send(randomPlayer.getEasyMode())
+  } catch (err) {
+    res.status(500).send(err)
+  }
 }
 
 module.exports = {
