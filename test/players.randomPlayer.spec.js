@@ -21,7 +21,7 @@ describe('Random player', function () {
 describe('NBA library', function () {
   let players
   before(function () {
-    randomPlayer.requestAllPlayers()
+    return randomPlayer.requestAllPlayers()
       .then(result => {
         players = result
       })
