@@ -3,26 +3,34 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 const nba = require('nba.js')
 
 describe('Random player', () => {
-  it('should be returned when randomPlayer util invoked', () => {
+  let player
+  before(() => {
     return randomPlayer.get()
-      .then(player => {
-        expect(player).to.be.ok
-        expect(player).to.have.ownProperty('name')
-        expect(player).to.have.ownProperty('startYear')
-        expect(player).to.have.ownProperty('endYear')
-        expect(false).to.be.true
+      .then(result => {
+        player = result
       })
+  })
+
+  it('should be returned when randomPlayer util invoked', () => {
+    expect(player).to.be.ok
+    expect(player).to.have.ownProperty('name')
+    expect(player).to.have.ownProperty('startYear')
+    expect(player).to.have.ownProperty('endYear')
   })
 })
 
 describe('NBA library', () => {
-  it('should get every player that has ever played', () => {
-    return randomPlayer.requestAllPlayers()
-      .then(players => {
-        expect(players).to.be.ok
-        expect(players).to.be.instanceof(Array)
-        expect(players).to.have.lengthOf(4163)
+  let players
+  before(() => randomPlayer.requestAllPlayers()
+      .then(result => {
+        players = result
       })
+  )
+
+  it('should get every player that has ever played', () => {
+    expect(players).to.be.ok
+    expect(players).to.be.instanceof(Array)
+    expect(players).to.have.lengthOf(4163)
   })
 })
 
