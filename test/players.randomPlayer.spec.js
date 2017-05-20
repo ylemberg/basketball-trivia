@@ -3,6 +3,7 @@ const randomPlayer = require('../server/utilities/randomPlayerUtil')
 
 describe('Random player', function () {
   let player
+
   before(function () {
     return randomPlayer.get()
       .then(result => {
@@ -20,6 +21,7 @@ describe('Random player', function () {
 
 describe('NBA library', function () {
   let players
+
   before(function () {
     return randomPlayer.requestAllPlayers()
       .then(result => {
@@ -46,6 +48,7 @@ describe('Players Util', function () {
 
   it('should get every player that has ever played', function () {
     const player = randomPlayer.pickRandomPlayerFromArray(players)
+
     expect(player).to.be.ok
     expect(player).to.be.an('object')
     expect(players.includes(player)).to.be.true
@@ -64,6 +67,7 @@ describe('Players Util', function () {
 
   it('should get every player that has ever played', function () {
     const formattedPlayer = randomPlayer.formatPlayer(player)
+
     expect(formattedPlayer).to.be.ok
     expect(formattedPlayer).to.be.an('object')
     expect(formattedPlayer).to.have.ownProperty('name')
