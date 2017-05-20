@@ -1,10 +1,7 @@
 const nba = require('nba.js')
+const easyPlayers = require('../easyModePlayers')
 
-const requestAllPlayers = () => {
-  return nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => {
-    return data.CommonAllPlayers
-  })
-}
+const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => data.CommonAllPlayers)
 
 const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
 
@@ -23,9 +20,12 @@ const get = () => {
     })
 }
 
+const getEasyMode = () => pickRandomPlayerFromArray(easyPlayers)
+
 module.exports = {
   get,
   requestAllPlayers,
   pickRandomPlayerFromArray,
-  formatPlayer
+  formatPlayer,
+  getEasyMode
 }

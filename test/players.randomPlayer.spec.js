@@ -1,6 +1,5 @@
 const expect = require('chai').expect
 const randomPlayer = require('../server/utilities/randomPlayerUtil')
-const nba = require('nba.js')
 
 describe('Random player', function () {
   let player
