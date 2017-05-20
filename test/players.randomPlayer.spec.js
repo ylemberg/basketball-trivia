@@ -21,11 +21,12 @@ describe('Random player', function () {
 
 describe('NBA library', function () {
   let players
-  before(function () randomPlayer.requestAllPlayers()
+  before(function () {
+    randomPlayer.requestAllPlayers()
       .then(result => {
         players = result
       })
-  )
+  })
 
   it('should get every player that has ever played', function () {
     expect(players).to.be.ok
