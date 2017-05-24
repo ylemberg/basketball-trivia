@@ -10,8 +10,15 @@
   * [refactor] - code does the same thing but it is better code
 
 ---
+## Libraries Used
+* [nba.js](https://github.com/kshvmdn/nba.js)
+* [chai.js](http://chaijs.com/api/bdd/)
+* [mocha.js](https://mochajs.org/)
+---
 ## List of Resources
-
-  ### Awesome Lists
+### Awesome Lists
 * [Awesome Redux](https://github.com/xgrommx/awesome-redux)
 * [Awesome React](https://github.com/enaqx/awesome-react)
+
+### Setting Up Docs
+* [Yarn Cheatsheet](https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc#.1ckrhd77a) 

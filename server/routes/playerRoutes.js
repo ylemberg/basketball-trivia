@@ -1,6 +1,8 @@
-const router = require('express').Router()
 const playerCtrl = require('../controllers/playerCtrl')
 
-router.get('/getall', playerCtrl.getPlayers)
+module.exports = router => {
+  router.get('/players/:name', playerCtrl.getPlayers)
 
-module.exports = router
+  router.get('/randomplayer/easymode', playerCtrl.getRandomPlayerInEasyMode)
+  router.get('/randomplayer/hardmode', playerCtrl.getRandomPlayerInHardMode)
+}
