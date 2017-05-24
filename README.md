@@ -14,6 +14,7 @@
 * [nba.js](https://github.com/kshvmdn/nba.js)
 * [chai.js](http://chaijs.com/api/bdd/)
 * [mocha.js](https://mochajs.org/)
+* [reactjs](https://facebook.github.io/react/)
 ---
 ## List of Resources
 ### Awesome Lists
