@@ -1,9 +1,10 @@
 const nba = require('nba.js')
 const easyPlayers = require('../easyModePlayers')
+const util = require('./')
 
 const requestAllPlayers = () => nba.stats.allPlayers({ IsOnlyCurrentSeason: 0 }).then(data => data.CommonAllPlayers)
 
-const pickRandomPlayerFromArray = players => players[Math.floor(Math.random() * players.length)]
+const pickRandomPlayerFromArray = players => players[util.getRandomIdxFromArr(players)]
 
 const formatPlayer = player => {
   return {
