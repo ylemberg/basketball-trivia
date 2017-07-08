@@ -8,13 +8,13 @@ export default class App extends Component {
     super()
 
     this.state = {
-      initialPlayer: ''
+      playerToCompareName: ''
     }
   }
   componentDidMount() {
-    axios.get('/randomplayer/easymode')
+    axios.get(`${process.env.DOMAIN}/randomplayer/easymode`)
       .then(res => {
-        console.log('name', res.data.name)
+        console.log('name', res.data)
         this.setState({
           initialPlayer: res.data.name
         })
