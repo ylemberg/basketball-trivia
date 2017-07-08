@@ -1,6 +1,7 @@
 import axios from 'axios'
-
 import React, { Component } from 'react'
+
+import Form from './components/Form'
 import './App.css'
 
 export default class App extends Component {
@@ -8,7 +9,7 @@ export default class App extends Component {
     super()
 
     this.state = {
-      playerToCompareName: 'temp'
+      playerToCompareName: ''
     }
   }
 
@@ -25,7 +26,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>{this.state.playerToCompareName}</div>
+      <div className="temp">
+        {this.state.playerToCompareName}
+        <Form />
+      </div>
     )
   }
 }
