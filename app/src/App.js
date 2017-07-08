@@ -26,9 +26,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="temp">
-        {this.state.playerToCompareName}
-        <Form />
+      <div className="fit_to_parent_height">
+        {/*{this.state.playerToCompareName}*/}
+        <Form player={this.state.playerToCompareName} />
       </div>
     )
   }

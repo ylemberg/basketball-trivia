@@ -1,3 +1,7 @@
-.temp {
+.fit_to_parent_height {
   height: 100%;
+}
+
+.player_input {
+  text-align: center;
 }
