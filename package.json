@@ -39,7 +39,8 @@
     "redux-promise": "^0.5.3",
     "redux-saga": "^0.14.5",
     "request": "^2.81.0",
-    "request-promise": "^4.2.0"
+    "request-promise": "^4.2.0",
+    "semantic-ui-react": "^0.71.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
